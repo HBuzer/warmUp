@@ -56,8 +56,39 @@
 				}
 			}
 		}
+
 		for (var i = 0; i < arr.length; i++) {
 			result += arr[i];
 		}
-		return result;
+
+	return result;
+	}
+
+// Q2
+	function camelCase(str) {
+		var string = str.split('');
+		var arr = [];
+
+		for (var i = 0; i < string.length; i++) {
+			if (string[i] === '-' || string[i] === '_') {
+				string.splice(i, 1);
+				string.splice(i, 1, string[i].toUpperCase());
+			}
+		}
+		arr.push(string.join(''));
+
+	return arr;
+	}
+
+// Q3
+	function filtered(array) {
+		var arr = [];
+
+		for (var i = 0; i < array.length; i++) {
+			if (array[i] > 0 && typeof array[i] === 'number') {
+				arr.push(array[i]);
+			}
+		}
+
+	return arr;
 	}
